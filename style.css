@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;    margin: 0;    box-sizing: border-box;
+    font-size: 1.8rem; 
+    user-select: none;
+    font-family: 'Noto Sans Mono', monospace;
+    --primary: #163172;
+    --secondary: #1e56a0;
+    --light: #d6e4f0;
+    --white: #f6f6f6;
+}
+body{
+    background: var(--light);
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10rem;
+    padding: 0 8rem;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+}
+header nav .logo{
+     color: var(--primary);     
+    font-weight: 700;
+    padding-bottom: 0.2rem;
+    font-size: 3rem;
+}
+header nav span{
+    font-size: 1.6rem;
+}
+header  .searchbar{    
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--primary);
+    border-radius: 2.4rem;
+}
+header  .searchbar #search{    
+    width: 61%; 
+    border-radius: 2.4rem; 
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+}
+header  .searchbar > button{    
+    width: 37%;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: 2.4rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 1.6rem;
+}
+.notesarea{
+    width: 100%;
+    padding: 8rem 8rem;
+}
+.notesarea form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--white);
+    padding: 0 4rem;
+    border-radius: 2.4rem;
+}
+.notesarea form hr{
+    width: 100%;
+    height: 4px;
+    background: var(--secondary);
+}
+.notesarea form input:first-child{
+    border: none;
+    outline: none;   
+    padding: 4rem 0rem 2rem 0rem;
+    background: transparent;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.notesarea form input::placeholder{
+     font-size: 4rem; 
+     color: var(--primary); 
+}
+.notesarea form  textarea{
+    border: none;
+    outline: none;
+    padding: 2rem 0rem;
+    resize: none;
+    background: transparent;
+    height: 30rem; 
+    overflow:  hidden;
+}
+.notesarea form  textarea::placeholder{
+    color: var(--secondary);
+}
+.notesarea form input[type='submit']{
+    width: 20rem;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    background: var(--secondary);
+    color: var(--white);
+    margin: 3rem 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in;
+    -moz-transition: .3s ease-in;
+    -ms-transition: .3s ease-in;
+    -o-transition: .3s ease-in;
+}
+.notesarea form input[type='submit']:hover{
+   background: var(--primary);    
+}
+.notesarea .savednotes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+.notesarea .savednotes .snote{
+    padding: 2.5rem 4rem;
+    border-radius: 0.8rem;
+    background: var(--white);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+
+.notesarea .savednotes .snote h5{
+    font-size: 2.7rem;
+    padding: 2rem 0 1rem 0;
+    color: var(--primary);
+    text-transform: capitalize;
+}
+.notesarea .savednotes .snote .date{
+    color: var(--secondary);
+} 
+.savednotes .marg{
+    margin-top: -3rem;
+}
+.notesarea .savednotes .snote  button{
+     border: 2px solid var(--primary);
+     background: transparent;
+     padding: .7rem 1rem;
+     color: var(--primary);
+     width: 18rem;
+     border-radius: 0.8rem;
+     cursor: pointer;     
+     margin-top: 2.5rem;
+     margin-left: auto;
+    outline: none;
+     transition: .3s ease-in;
+     -webkit-transition: .3s ease-in;
+     -moz-transition: .3s ease-in;
+     -ms-transition: .3s ease-in;
+     -o-transition: .3s ease-in;
+}
+.notesarea .savednotes .snote  button:hover{   
+    border: 2px solid var(--primary);
+    background:  var(--primary);
+    color: var(--white); 
+}
+.notesarea h3{
+    font-size: 4rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-top: 8rem;
+}
+.notesarea .savednotes .snote{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Media Queries  //////////////////////////////////////*/
+@media  (max-width: 1155px) {    
+    header { 
+        padding: 0 6rem;
+    } 
+    .notesarea {
+        width: 100%;
+        padding: 8rem 6rem;
+    }
+    header  .searchbar {
+        width: 40%; 
+    }
+}
+@media  (max-width: 1000px) {    
+    header  .searchbar {
+        width: 48%; 
+    }
+    .notesarea form { 
+        padding: 0 3rem; 
+    }
+    .notesarea form input:first-child { 
+        padding: 3rem 0rem 0rem 0rem; 
+    }
+    .notesarea .savednotes .snote {
+        padding: 2rem 2.5rem; 
+    }
+}
+@media  (max-width: 900px) {    
+    header { 
+        padding: 0 4rem;
+    } 
+    .notesarea {
+        width: 100%;
+        padding: 8rem 4rem;
+    }
+}
+@media  (max-width: 800px) {    
+    html{
+        font-size: 55%;
+    }
+}
+@media  (max-width: 700px) {    
+    header nav .logo { 
+        font-size: 2.5rem;
+    }
+    .notesarea form input:first-child { 
+        font-size: 3rem; 
+    }
+    .notesarea h3 {
+        font-size: 3rem; 
+        margin-top: 6rem;
+    }
+    header  .searchbar {
+        width: 55%;
+    }
+    header nav span {
+        font-size: 1.4rem;
+    }
+    header  .searchbar #search { 
+        padding: 0.3rem 1rem; 
+        font-size: 1.5rem;
+    }
+}
+
+@media  (max-width: 650px) {
+    header { 
+        align-items:  flex-start;
+        justify-content: center; 
+        height:  auto;
+        flex-direction: column; 
+        gap: 4rem;
+        padding: 1rem 4rem;
+    }
+    header  .searchbar {
+        width: 65%;
+        margin: 0 auto;
+    }
+    header  .searchbar #search {
+        padding: 0.4rem 1.3rem;
+        font-size: 1.5rem;
+    }
+    .notesarea { 
+        padding: 6rem 4rem;
+    }
+    .notesarea .savednotes .snote {
+        padding: 2rem 2rem;
+    }
+    .notesarea .savednotes .snote  button { 
+        padding: .5rem 1rem; 
+        width: 16rem; 
+    }
+}
+
+@media  (max-width: 570px) {
+    header  .searchbar {
+        width: 75%; 
+    }
+    html{
+        font-size: 45%;
+    }
+}
+@media  (max-width: 500px) {
+    header  .searchbar {
+        width: 75%; 
+    }
+    html{
+        font-size: 45%;
+    }
+}
+@media  (max-width: 451px) {
+    header  .searchbar {
+        width: 85%; 
+    } 
+    header { 
+        padding: 1rem 2rem;
+    }
+    .notesarea {
+        padding: 6rem 2rem;
+    }
+    .notesarea form input[type='submit'] {
+        width: 17rem;
+        padding: 1rem 2rem; 
+    }    
+    .notesarea form {
+        padding: 0 2rem;
+    }
+}
+@media  (max-width: 380px) {
+    header  .searchbar {
+        width: 90%; 
+    }  
+     
+    header  .searchbar #search {
+        padding: 0.2rem 1.3rem;
+        font-size: 1.5rem;
+    }
+    .notesarea .savednotes .snote h5 {
+        font-size: 2.5rem;
+        padding: 1.5rem 0 1rem 0; 
+    }
+}
+@media  (max-width: 350px) {
+    header  .searchbar {
+        width: 95%; 
+    } 
+    header nav .logo {
+        font-size: 2rem;
+    }
+    .notesarea form input:first-child {
+        padding: 2rem 0rem 0rem 0rem;
+    }
+}
+@media  (max-width: 322px) {
+    .notesarea .savednotes .snote {
+        padding: 2rem 1.5rem;
+    }
+    header  .searchbar {
+        width: 100%;
+    }
+    .notesarea form {
+        padding: 0 1.5rem;
+    }
+    header  .searchbar > button { 
+        font-size: 1.4rem;
+    }
+}
+

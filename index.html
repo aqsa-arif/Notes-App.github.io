@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Img/notes.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title> Notes App </title>
+</head>
+<body>
+
+    <header>
+        <nav>
+        <div class="logo">NotesApp</div>
+        <span>Make your own notes</span>
+        </nav>
+
+        <div class="searchbar">
+            <input type="text" name="search" id="search" autocomplete="off">
+            <button>Search Notes</button>
+        </div>
+    </header>
+
+    <section class="notesarea">
+        <form action="">
+            <input type="text" name="title" id="title" class="title" placeholder="Title">
+            <textarea name="msg" id="msg" cols="30" rows="10" class="msg" placeholder="Add notes here"></textarea>
+            <hr>
+            <input type="submit" value="Create Note" id="createbtn">
+        </form>
+
+        <h3 class="preview" >Your Notes</h3>
+        <div class="savednotes">
+
+            <!-- <div class="snote">
+                <div class="date">30 Sep 2022</div>
+                <h5>The Restaurant</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit expedita dolor ad dignissimos velit illum nulla pariatur atque esse magnam.</p>
+
+                <div class="noteoptions">
+                    <button type="button">View Note</button>
+                    <button type="button">Delete Note</button>
+                </div>
+
+            </div> --> 
+        </div>
+    </section>
+    
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
